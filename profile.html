@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Profile</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href="css/dashboard.css" rel="stylesheet">
+		<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="C:\Users\sjjai\Desktop\web\passtest.js"></script>
+		<style>
+			.leftmargin{margin-left:15px;}
+		</style>
+		
+		<script type= "text/javascript">
+			$(function() {
+				$('#profile_photo').change(function(e) {
+					
+					var img = URL.createObjectURL(e.target.files[0]);
+					$('.leftmargin').attr('src', img);
+				});
+			});
+		</script>
+	</head>
+	
+	
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Project name</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Dashboard</a></li>
+						<li><a href="#">Settings</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Help</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</nav>
+		
+		
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar">
+						
+						<!--WHATEVER CHANGES U MAKE HERE MAKE IT IN OTHER PAGES TOO-->
+						<li><img src="pic.jpg" width="200" height="200" class="img-responsive img-circle" alt="Generic placeholder thumbnail">&nbsp;</li>						
+						<li><a href="dashboard.html">My Trips <span class="sr-only">(current)</span></a></li>
+						<li class="active"><a href="profile.html">Profile</a></li>
+						
+						<li><a href="feedback.html">Feedback</a></li>
+						<li><a href="index.html">Log Out</a></li>
+					</ul>
+					
+					
+					
+				</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					
+					
+			
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="well well-sm">
+									<form class="form-horizontal" method="post">
+										<fieldset>
+											<legend class="text-center header">Profile</legend>
+											<h4>General Information</h4>
+											<hr>
+											
+											<div class="form-grid form-grid--bordered">
+												<div class="grid">
+													<label for="profile_photo" class="form-group__label">Profile Photo</label>
+													<img src="https://d1w2poirtb3as9.cloudfront.net/default.jpeg" width="100" height="100" class="leftmargin img-bordered img-circle img-flush"/>
+													<input type="file" id="profile_photo" name="picture" class="hidden" accept="image/*" capture/>
+													<label for="profile_photo" class="file-input btn btn-primary leftmargin">Set Picture</label>
+												</div>
+												
+												
+												
+											</div>
+											<br>
+											<div class="row">
+												<label for="firstName" class="col-sm-2 ">Name</label>
+												<div class="form-group col-lg-3">
+													<div class = "leftmargin">
+														<input type="text" id="firstName" placeholder="First Name" class="form-control" >
+													</div>
+												</div>	
+												
+												
+												<div class="form-group col-lg-3 ">
+													<div class = "leftmargin">
+														<input type="text" id="lastName" placeholder="Last Name" class="form-control" >
+													</div>	
+												</div>
+											</div>
+											
+											
+											<div class="form-group">
+												<label for="email" class="col-sm-2">Email</label>
+												<div class="col-sm-3">
+													<input type="email" id="email" placeholder="example@example.com" class="form-control">
+												</div>
+											</div>
+											<!--
+												<div class="form-group">
+												<label for="password" class="col-sm-1 control-label">Password</label>
+												<div class="col-sm-3">
+												<input type="password" id="password" placeholder="Password" class="form-control" onchange='check_pass();'>
+												</div>
+												</div>
+												
+												<div class="form-group">
+												<label for="confirmpassword" class="col-sm-1">Confirm Password</label>
+												<div class="col-sm-3">
+												<input type="password" id="confirm_password" placeholder="Confirm Password" class="form-control" onkeyup="checkPass(); return false;">
+												<span id="confirmMessage" class="confirmMessage"></span>
+												</div>
+												</div>
+											-->
+											
+											<div class="form-group">
+												<label for="birthDate" class="col-sm-2">Date of Birth</label>
+												<div class="col-sm-3">
+													<input type="date" id="birthDate" class="form-control">
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<label for="mobnum" class="col-sm-2 ">Contact Number</label>
+												<div class="col-sm-3">
+													<input type="number" id="r" placeholder="+91" class="form-control">
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<label for="regnum" class="col-sm-2 ">Registration Number</label>
+												<div class="col-sm-3">
+													<input type="text" id="r" placeholder="Optional" class="form-control">
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<label class="col-sm-2">Gender</label>
+												<div class="col-sm-6">
+													<div class="row">
+														<div class="col-sm-3">
+															<label class="radio-inline">
+																<input type="radio" id="femaleRadio" value="Female" name = "gender">Female
+															</label>
+														</div>
+														<div class="col-sm-2">
+															<label class="radio-inline">
+																<input type="radio" id="maleRadio" value="Male" name = "gender">Male
+															</label>
+														</div>
+													</div>
+												</div>
+											</div> <!-- /.form-group -->
+											
+											<div class="form-group">
+												<div class="col-sm-9 ">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">I accept <a href="#">terms and conditions</a>
+														</label>
+													</div>
+												</div>
+											</div> <!-- /.form-group -->
+											
+											<div class="form-group">
+												<div class="col-sm-2 col-sm-offset-3">
+													<button type="submit" class="btn btn-primary btn-block">Register</button>
+												</div>
+											</div>
+										</fieldset>
+									</form> <!-- /form -->
+								</div>
+							</div>
+						</div>
+				
+					
+					
+				</div> <!-- ./container -->
+			</div>
+		</div>
+		
+	</body>
+</html>											
